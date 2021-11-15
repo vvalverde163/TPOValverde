@@ -5,21 +5,28 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function validarFormulario(evento) {
-  var nombre = document.getElementById("nombre").value;
+  let nombre = document.getElementById("nombre").value;
   if (nombre.length == 0) {
     alert("No has escrito nada en el nombre");
     return;
   }
-  var edad = document.getElementById("edad");
-  if (edad.length < 18) {
-    alert("Debe ser mayor de 18 años para hacer esta petición");
+  let edad = document.getElementById("edad").value;
+  console.log(edad);
+  if (edad < 0) {
+    alert("El valor de la edad debe ser mayor a 0");
+    return;
   }
-  var celular = document.getElementById("celular").value;
+  if (edad < 18) {
+    alert("Debe ser mayor de 18 años para hacer esta petición");
+    return;
+  }
+  let celular = document.getElementById("celular").value;
   if (celular.length < 9) {
     alert(
-      "El celular indicado no corresponde. Favor escribalo con codigo de área"
+      "El celular ingresado no es valido. Por favor escribalo nuevamente"
     );
     return;
   }
+  alert('¡Su formulario ha sido enviado con éxito!')
   this.submit();
 }
