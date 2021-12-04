@@ -112,8 +112,21 @@ p {
   font-weight: bold;
   padding: 10px;
 }
+.main-tutoriales {
+  position: fixed;
+  margin-top: 4%;
+  font-family: "Josefin Sans", sans-serif;
+  text-align: center;
+  /* grid-area: main; */
+  font-size: 20px;
+  left: 25%;
+  color: rgb(34, 8, 8);
+  font-weight: bold;
+  padding: 10px;
+}
 .main-form {
   position: fixed;
+  width: 100%;
   margin-top: 4%;
   font-family: "Josefin Sans", sans-serif;
   text-align: right;
